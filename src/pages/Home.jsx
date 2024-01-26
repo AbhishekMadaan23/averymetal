@@ -1,9 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import Dummy from "../components/Dummy";
-import TopSlider from "../components/TopSlider";
 import HomeSlider from "../components/HomeSlider";
+import Description from "../components/Description";
+import Carasouel from "../components/Carasouel";
+import Testimonials from "../components/Testimonials";
+import ClientCarasouel from "../components/ClientCarasouel";
+import Newsletter from "../components/Newsletter";
 
 const Home = () => {
   return (
@@ -11,8 +14,11 @@ const Home = () => {
       <Header />
       <Navbar />
       <HomeSlider />
-      <Dummy />
-      <Dummy />
+      <Description />
+      <Carasouel />
+      <Testimonials />
+      <ClientCarasouel />
+      <Newsletter />
     </div>
   );
 };

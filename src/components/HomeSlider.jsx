@@ -15,9 +15,12 @@ const sliderImages = [
   {
     url: "https://lh4.googleusercontent.com/OAbH25TpeH4KXwz9GFUAEa4vu3GoRwlrJcz440gz2LCJDDU1-Z5HqjNcmAf-yVWQXUw_C4S2wepHT54ByhCYKKTY9m_YKOLYJRE8SeeNtEcN88CRKF6O3ilThKjIfStsPUVq9sKZ",
   },
+  {
+    url: "https://th.bing.com/th/id/OIP.f9FAxYywuG-kdoEuYk005QHaE8?rs=1&pid=ImgDetMain",
+  },
 ];
 const Slider = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 80vh;
   overflow: hidden;
 `;
@@ -48,6 +51,17 @@ const RightArrow = styled.div`
   color: #fff;
 `;
 
+const DotContainer = styled.div`
+  position: absolute;
+  bottom: 10px;
+  height: 30px;
+  width: 100%;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+`;
+
 const HomeSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -74,6 +88,19 @@ const HomeSlider = () => {
         <LeftArrow onClick={goToPrevious}>❰</LeftArrow>
         <RightArrow onClick={goToNext}>❱</RightArrow>
         <Slide></Slide>
+        <DotContainer>
+          {sliderImages.map((image, index) => (
+            <div
+              style={{ margin: "5px 10px", cursor: "pointer" }}
+              onClick={() => {
+                setCurrentIndex(index);
+              }}
+            >
+              {" "}
+              ●
+            </div>
+          ))}
+        </DotContainer>
       </ImageSlider>
     </Slider>
   );
