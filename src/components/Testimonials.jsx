@@ -40,7 +40,7 @@ const StyledHeading = styled.div`
 `;
 
 const Wrapper = styled.div`
-  height: 50%;
+  height: 65%;
   width: 70%;
   margin-top: 30px;
   display: flex;
